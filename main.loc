@@ -1,7 +1,12 @@
 source "C" from "cbase.h" (
     "packDouble"
   , "unpackDouble"
+  , "packInt"
+  , "unpackInt"
 );
 
 packDouble C :: packs => Double -> JSON;
 unpackDouble C :: unpacks => JSON -> Double;
+
+packInt C :: packs => Int -> JSON;
+unpackInt C :: unpacks => JSON -> Int;
