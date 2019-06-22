@@ -3,6 +3,8 @@ source "C" from "cbase.h" (
   , "unpackDouble"
   , "packInt"
   , "unpackInt"
+  , "packJson"
+  , "unpackJson"
 );
 
 packDouble C :: packs => Double -> JSON;
@@ -10,3 +12,9 @@ unpackDouble C :: unpacks => JSON -> Double;
 
 packInt C :: packs => Int -> JSON;
 unpackInt C :: unpacks => JSON -> Int;
+
+packString C :: packs => String -> JSON;
+unpackString C :: unpacks => JSON -> String;
+
+packJson C :: packs => JSON -> JSON;
+unpackJson C :: packs => JSON -> JSON;
