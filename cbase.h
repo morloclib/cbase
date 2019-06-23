@@ -20,7 +20,7 @@ char* packInt(int x){
   sprintf(x_str, "%ld", x);
   return x_str;
 }
-char* packString(int x){
+char* packString(char* x){
   return x;
 }
 
@@ -34,6 +34,6 @@ int unpackInt(char* json){
   sscanf(json, "%ld", &x);
   return x;
 }
-int unpackString(char* json){
+char* unpackString(char* json){
   return json;
 }
