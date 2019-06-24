@@ -7,11 +7,13 @@ source "C" from "cbase.h" (
   , "unpackString"
 );
 
-packDouble C :: packs => Double -> JSON;
-unpackDouble C :: unpacks => JSON -> Double;
+# JSON type is "char*"
 
-packInt C :: packs => Int -> JSON;
-unpackInt C :: unpacks => JSON -> Int;
+packDouble C :: packs => "double" -> "char*";
+unpackDouble C :: unpacks => "char*" -> "double";
 
-packString C :: packs => String -> JSON;
-unpackString C :: unpacks => JSON -> String;
+packInt C :: packs => "int" -> "char*";
+unpackInt C :: unpacks => "char*" -> "int";
+
+packString C :: packs => "char*" -> "char*";
+unpackString C :: unpacks => "char*" -> "char*";
