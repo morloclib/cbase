@@ -7,7 +7,7 @@ source "C" from "cbase.h" (
   , "unpackString"
 );
 
-# JSON type is "char*"
+-- JSON type is "char*"
 
 packDouble C :: packs => "double" -> "char*";
 unpackDouble C :: unpacks => "char*" -> "double";
