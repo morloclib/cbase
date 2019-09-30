@@ -1,3 +1,5 @@
+module cbase {
+
 source "C" from "cbase.h" (
     "packDouble"
   , "unpackDouble"
@@ -17,3 +19,5 @@ unpackInt C :: unpacks => "char*" -> "int";
 
 packString C :: packs => "char*" -> "char*";
 unpackString C :: unpacks => "char*" -> "char*";
+
+}
