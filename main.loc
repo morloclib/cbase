@@ -1,6 +1,6 @@
 module cbase {
 
-source "C" from "cbase.h" (
+source C from "cbase.h" (
     "packDouble"
   , "unpackDouble"
   , "packInt"
